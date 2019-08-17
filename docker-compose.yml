@@ -1,0 +1,32 @@
+version: '3'
+services:
+  my_bash:
+#    image: ubuntu:14.04
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./docker_data:/home/root
+    command: bash
+    stdin_open: True
+    tty: True
+#  web:
+#    image: httpd:2.4
+#    volumes:
+#      - ./public_html:/usr/local/apache2/htdocs
+#    ports:
+#      - 8080:80
+#  db:
+#    image: postgres
+#    restart: always
+#    environment:
+#      POSTGRES_PASSWORD: example
+#    ports:
+#      - 5432:5432
+#    volumes:
+#      - ./postgres_data:/var/lib/postgresql/data
+#  adminer:
+#    image: adminer
+#    restart: always
+#    ports:
+#      - 8081:8080

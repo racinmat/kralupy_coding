@@ -58,11 +58,20 @@ class LimitedInventory(Inventory):
         self._items = other_items
 
 
-if __name__ == '__main__':
+def create_inventories():
+    inventory_1 = Inventory([
+        'malá věc', 'velká věc'])
+    inventory_2 = LimitedInventory([
+        'malá věc', 'střední věc', 'veká věc'], 4)
+    return [inventory_1, inventory_2]
+
+
+def main():
     inventory_1 = Inventory([
         'vařečka', 'meč osudu'])
     inventory_2 = LimitedInventory([
         'vařečka', 'meč osudu', '30 zlatek'], 4)
+    print(create_inventories())
     # print(inventory_1.filled_size(), inventory_1.items)
     # print(inventory_2.filled_size(), inventory_2.items)
     # print(inventory_1)
@@ -80,8 +89,11 @@ if __name__ == '__main__':
     # inventory_2.loot_inventory(inventory_1)
     # print(inventory_1)
     # print(inventory_2)
-    # for item in inventory_1:
-    #     print(item)
+    item = 'můj velký item'
+    print('item', item)
+    for item in inventory_1:
+        print(item)
+    print('item', item)
     print(inventory_1.my_items)
     print(inventory_2.my_items)
 
@@ -89,3 +101,6 @@ if __name__ == '__main__':
     print(inventory_1.my_items)
     print(inventory_2.my_items)
 
+
+if __name__ == '__main__':
+    main()
