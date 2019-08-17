@@ -13,6 +13,7 @@ def is_palindrome(string):
             return False
     return True
 
+
 if __name__ == '__main__':
     @test.describe('sample tests')
     def sample_tests():
@@ -23,12 +24,3 @@ if __name__ == '__main__':
         test.assert_equals(is_palindrome('walter'), False)
         test.assert_equals(is_palindrome('kodok'), True)
         test.assert_equals(is_palindrome('Kasue'), False)
-
-    # assert is_palindrome('a')
-    # assert is_palindrome('aba')
-    # assert is_palindrome('Abba')
-    # assert is_palindrome('malam')
-    # assert not is_palindrome('walter')
-    # assert is_palindrome('kodok')
-    # assert not is_palindrome('Kasue')
-    # print('vše funguje')

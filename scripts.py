@@ -35,22 +35,22 @@ if __name__ == '__main__':
     # print(6 % 4)
     # print(divmod(6, 5))
     #
-
-    my_number = -84
-    is_even = (my_number % 2) == 0  # zbytek po dělení 2 je 0
-    is_divisible_by_five = (my_number % 5) == 0
-    is_positive = my_number > 0
-    is_divisible_by_ten = is_even and is_divisible_by_five
-    if is_even:
-        print('is even')
-    if is_divisible_by_five:
-        print('is divisible by five')
-    if is_divisible_by_ten:
-        print('is divisible by 10')
-    if is_even or is_divisible_by_five:
-        print('is divisible by 2 or 5')
-    if is_positive and (is_even or is_divisible_by_five):  # zkratka pro else if
-        print('is positive and divisible by (2 or 5)')
+    #
+    # my_number = -84
+    # is_even = (my_number % 2) == 0  # zbytek po dělení 2 je 0
+    # is_divisible_by_five = (my_number % 5) == 0
+    # is_positive = my_number > 0
+    # is_divisible_by_ten = is_even and is_divisible_by_five
+    # if is_even:
+    #     print('is even')
+    # if is_divisible_by_five:
+    #     print('is divisible by five')
+    # if is_divisible_by_ten:
+    #     print('is divisible by 10')
+    # if is_even or is_divisible_by_five:
+    #     print('is divisible by 2 or 5')
+    # if is_positive and (is_even or is_divisible_by_five):  # zkratka pro else if
+    #     print('is positive and divisible by (2 or 5)')
     # else:
     #     print('is not divisibe by two nor five')
     # #
@@ -111,3 +111,29 @@ if __name__ == '__main__':
     # todo: probrat booleovské výrazy a not
     # for i in my_variable:
     #     print(i)
+
+    my_dict = {
+        1: 5,
+        2: 6,
+        5: 7,
+        10: -8,
+    }
+
+    print(my_dict)
+    print(1 in my_dict)
+    print(6 in my_dict)
+    print(my_dict[1])
+    print(my_dict[5])
+    my_dict[5] = 8
+    print(my_dict[5])
+    my_dict[6] = 20
+    print(6 in my_dict)
+    print(my_dict)
+    my_dict[6] += 1
+    my_dict[6] = my_dict[6] + 1
+    print(my_dict)
+
+    for i in my_dict:
+        print(i)
+    for key, value in my_dict.items():
+        print(key, value)
